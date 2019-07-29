@@ -1,0 +1,43 @@
+<!-- /templates/page.liquid -->
+{% if page.title == '.' %}
+	<style>
+		.page-title-template {
+  			display: none;
+  		}
+      
+      @media only screen and (min-width: 1300px) { .routinepages { font-size: 3vw; } }
+	</style>
+{% endif %}
+
+{% if page.title == 'Mature/Dry Skincare Routine' %}
+	<style>
+      @media only screen and (max-width: 900px) { .page-title-template { font-size: 20px; }  }
+	</style>
+{% endif %}
+
+{% if page.title == 'Oily/Sensitive Skincare Routine' %}
+	<style>
+		@media only screen and (max-width: 900px) { .page-title-template { font-size: 20px; }  }
+	</style>
+{% endif %}
+
+{% if page.title == 'Male Skincare Routine' %}
+	<style>
+		@media only screen and (max-width: 900px) { .page-title-template { font-size: 20px; } }
+	</style>
+{% endif %}
+
+{% if page.title == 'Normal Skincare Routine' %}
+	<style>
+		@media only screen and (max-width: 900px) { .page-title-template { font-size: 20px; } }
+	</style>
+{% endif %}
+
+<div class="page-width page-container">
+  <header>
+    <h1 class="page-title-template" style="text-align: center;">{{ page.title }}</h1>
+  </header>
+  <div class="rte rte--indented-images">
+    {{ page.content }}
+  </div>
+</div>
